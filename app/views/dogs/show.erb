@@ -1,0 +1,13 @@
+<h1> <%= @dog.name %> Details </h1> 
+
+<p>Name: <%= @dog.breed %> </p>
+<p>Age : <%= @dog.age %> </p>
+
+<% select_employees = @employees.select do |each_employee| %>
+    <% each_employee.dog_id == @dog.id %>
+<% end %>
+
+<p>Employees: </p>
+<% select_employees.each do |each_employee| %>
+    <ol><%= each_employee.first_name %></ol>
+<% end %>
